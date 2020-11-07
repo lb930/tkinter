@@ -9,7 +9,6 @@ class Weather(Frame):
         super(Weather, self).__init__(master)
         self.place()
         self.widgets()
-        # self.api_key = '5ae9eac0874aa414a769306b070221cf'
 
     def widgets(self):
         # width * height
@@ -104,17 +103,13 @@ class Weather(Frame):
 
     def get_data(self):
 
-        # implement API key error eg if it's empty
-        # if len(self.api_key_field.get()) == 0:
-        #     raise ValueError('Please provide a valid API key')
+        implement API key error eg if it's empty
+        if len(self.api_key_field.get()) == 0:
+            raise ValueError('Please provide a valid API key')
 
-        # url_current = f'http://api.weatherstack.com/current?access_key={self.api_key_field.get()}&query={self.location_field.get()}&unit=m'
-        # json_url_current = requests.get(url_current)
-        # current_weather = json.loads(json_url_current.text)
-        
-        current_weather = {'request': {'type': 'City', 'query': 'Amsterdam', 'language': 'en', 'unit': 'm'}, 'location': {'name': 'Amsterdam', 'country': 'Netherlands', 'region': 'North Holland', 'lat': '52.374', 'lon': '4.890', 'timezone_id': 'Europe/Amsterdam', 'localtime': '2020-11-06 12:10', 'localtime_epoch': 1604664600, 'utc_offset': '1.0'},
-                                 'current': {'observation_time': '11:10 AM', 'temperature': 11, 'weather_code': 116, 'weather_icons': ['https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png'], 'weather_descriptions': ['Partly cloudy'], 'wind_speed': 11, 'wind_degree': 120, 'wind_dir': 'ESE', 'pressure': 1034, 'precip':
-                                             0, 'humidity': 76, 'cloudcover': 25, 'feelslike': 11, 'uv_index': 3, 'visibility': 10, 'is_day': 'yes'}}
+        url_current = f'http://api.weatherstack.com/current?access_key={self.api_key_field.get()}&query={self.location_field.get()}&unit=m'
+        json_url_current = requests.get(url_current)
+        current_weather = json.loads(json_url_current.text)
 
         self.location = current_weather['location']['name']
         self.temperature_now = current_weather['current']['temperature']
