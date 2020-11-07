@@ -3,7 +3,6 @@ import requests
 from tkinter import *
 from PIL import Image, ImageTk
 
-
 class Weather(Frame):
     def __init__(self, master):
         super(Weather, self).__init__(master)
@@ -103,7 +102,6 @@ class Weather(Frame):
 
     def get_data(self):
 
-        implement API key error eg if it's empty
         if len(self.api_key_field.get()) == 0:
             raise ValueError('Please provide a valid API key')
 
