@@ -18,13 +18,13 @@ class StockApp(Frame):
         root.configure(bg='#FFFFFF')
 
         # Header
-        border_top = Label(text='_______', font=('Calibri light', 24, ''), bg='#FFFFFF', fg = '#383535')
+        border_top = Label(text='_______', font=('Calibri light', 24, ''), bg='#FFFFFF')
         border_top.place(x=30, y=0)
         
-        border_bottom = Label(text='_______', font=('Calibri light', 24, ''), bg='#FFFFFF', fg = '#383535')
+        border_bottom = Label(text='_______', font=('Calibri light', 24, ''), bg='#FFFFFF')
         border_bottom.place(x=350, y=0)
         
-        header_label = Label(text='STOCK PRICES', font=('Calibri light', 24, ''), bg='#FFFFFF', fg = '#383535')
+        header_label = Label(text='STOCK PRICES', font=('Calibri light', 24, ''), bg='#FFFFFF')
         header_label.place(x=157, y=15)
 
         # Enter your API key
