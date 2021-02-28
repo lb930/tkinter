@@ -2,6 +2,6 @@ This app returns the adjusted close price of a given stock symbol. It requires a
 
 
 <p>
-    <img src="stock_prices.PNG" width="500" height="400" />
+    <img src="stock_prices.PNG" width="500" height="350" />
 </p>
 
